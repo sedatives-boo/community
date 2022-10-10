@@ -1,5 +1,8 @@
 package com.nowcoder.community.entity;
 
+/**
+ * 封装分页相关的信息
+ */
 public class Page {
     private int current = 1;//当前页码
     private int limit =10;//显示上限
