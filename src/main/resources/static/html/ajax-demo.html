@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+<p>
+    <input type="button" value="发送" onclick="send();">
+</p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script><!--从官网引入的jQuery-->
+<script>
+    function send(){
+        $.post(//$.get $.post 都是 $.ajax的省略用法
+            //需要三个参数
+            "/community/alpha/ajax",
+            {"name":"扎根","age":23},
+            function (data){//匿名回调函数，将服务器返回的数据传给这个方法
+                console.log(typeof (data));
+                console.log(data);
+                //将 字符串转化为json对象
+                data  = $.parseJSON(data);
+                console.log(typeof (data));
+                console.log(data.code);
+                console.log(data.msg);
+
+            }
+        );
+    }
+</script>
+</body>
+</html>

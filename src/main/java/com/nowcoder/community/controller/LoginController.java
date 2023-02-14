@@ -85,10 +85,10 @@ public class LoginController implements CommunityConstant {
         BufferedImage image = kaptchaProducer.createImage(text);
         //将验证码存入session
         session.setAttribute("kaptcha",text);
-        //将图片输出给浏览器
+        //将图片输出给浏览器,注意使用response
         response.setContentType("image/png");
         try {
-            ServletOutputStream os = response.getOutputStream();
+            ServletOutputStream os = response.getOutputStream();//字节流
             ImageIO.write(image,"png",os);
         } catch (IOException e) {
             //这里就不要捕获异常了，

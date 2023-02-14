@@ -44,7 +44,7 @@ public class HomeController {
             }
         }
         model.addAttribute("discussPosts",discussPosts);
-        model.addAttribute("page",page);//其实可以不用加
+        //model.addAttribute("page",page);//其实可以不用加
         return "/index";
     }
 }
