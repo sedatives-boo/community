@@ -26,5 +26,8 @@ public class KaptchaConfig {
         kaptcha.setConfig(config);
         return kaptcha;
         //这里是测试testing branch 的新内容
+        //测试一下merge和rebase的使用
+        //再试一下
+        //这里是加了tt2 线路后的
     }
 }
